@@ -21,33 +21,44 @@
             </div>
             
             <!-- Dropdown menu | top section-->
-            <div class="menu" data-id="menu">
-                <button class="menu-btn" data-id="menu-btn">
+            <div class="menu">
+                <button class="menu-btn">
                 Actions
                 <i class="fa-solid fa-chevron-down"></i>
                 </button>
     
-                <!--<div class="items border hidden" data-id="menu-items">
-                <button data-id="reset-btn">Reset</button>
-                <button data-id="new-round-btn">New Round</button>
-                </div>-->
+                <div class="items border hidden">
+                <button>Reset</button>
+                <button>New Round</button>
+                </div>
             </div>
 
             <!--game section-->
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
-            <div class="square"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
+            <div class="square shadow"></div>
 
             <!--botton | score section-->
-            <div class="score"></div>
-            <div class="score"></div>
-            <div class="score"></div>
+            <div class="score shadow" style="background-color: var(--turquoise);">
+                <p>Player 1</p>
+                <span>0 Wins</span>
+            </div>
+
+            <div class="score shadow" style="background-color: var(--light-gray);">
+                <p>Ties</p>
+                <span>0</span>
+            </div>
+
+            <div class="score shadow" style="background-color: var(--yellow);">
+                <p>Player 2</p>
+                <span>0 Wins</span>
+            </div>
         </div>
     </main>
 
@@ -61,5 +72,15 @@
             <a href="#">name</a>
         </p>
     </footer>
+
+    <!--Model that opens when game ends-->
+    <div class="model hidden">
+        <div class="model-contents">
+            <p>Player 1 wins!</p>
+            <button>Play again</button>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
 </body>
 </html>

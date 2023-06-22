@@ -30,6 +30,26 @@ body{
     align-items: center;
 }
 
+/* Shared utility classes */
+button:hover {
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.border {
+    border: 1px solid rgba(211, 211, 211, 0.4) !important;
+}
+
+/*main*/
 .grid{
     display: grid;
     /*makes 3 columns. each column 80px wide*/
@@ -102,20 +122,56 @@ body{
     background-color: rgba(211, 211, 211, 0.05);
     border: 1px solid transparent;
 }
+/*container for sub-menu*/
+.items{
+    position: absolute;
+    /* z-index: 10; */
+    top: 60px;
+    /* right: 0; */
+    background-color: #2a3139;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.items button{
+    background-color: transparent;
+    padding: 8px;
+    color: white;
+}
+.items button:hover{
+    text-decoration: underline;
+}
 
 .square{
-    background-color: red;
+    display: flex;
+    background-color: var(--gray);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+}
+.square:hover{
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .score{
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
-.actions{
-    background-color: purple;
+.score p{
+    font-size: 14px;
+    font-weight: 600;
 }
 
-
+.score span{
+    font-size: 12px;
+    margin-top: 2px;
+}
 
 /*footer styles*/
 footer{
@@ -129,4 +185,37 @@ footer p{
 }
 footer a{
     color: var(--yellow);
+}
+
+/*model style*/
+.model{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.model-contents{
+    height: 150px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #2a4544;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    margin: 10px;
+}
+
+.model-contents button{
+    padding: 10px;
+    background-color: var(--turquoise);
+    border-radius: 5px;
+    color: #2a4544;
 }
